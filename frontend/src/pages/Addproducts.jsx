@@ -9,7 +9,7 @@ function Addproducts() {
 
   useEffect(() => {
     const fetchdata = async () => {
-      const response = await axios.get("http://localhost:3000/addproduct");
+      const response = await axios.get("https://books-app-9pwi.onrender.com/addproduct");
       console.log(response.data);
       setdata(response.data);
     };
@@ -18,7 +18,7 @@ function Addproducts() {
 
   const handleBookmark = async (item) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/addproduct/${item._id}`);
+      const response = await axios.delete(`https://books-app-9pwi.onrender.com/addproduct/${item._id}`);
       toast(response.data.message);
 
       // Update the state to remove the deleted item from the list
